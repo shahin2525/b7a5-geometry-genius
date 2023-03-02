@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shopping-cart</title>
+    <title>Geometri-genious</title>
     <!-- css link -->
     <link rel="stylesheet" href="geometry.css" />
     <!-- daisy and tailwind link -->
@@ -49,7 +49,7 @@
                 Area (A) = <span id="triangle-number">0.5</span
                 ><span>&#215;</span>b<span>&#215;</span>h
               </p>
-              <div class="">
+              <div>
                 <input
                   id="triangle-b"
                   type="text"
@@ -82,14 +82,28 @@
               />
             </figure>
             <div class="card-body items-center text-center">
-              <h2 class="card-title">Rectangle</h2>
-              <p>
-                Area (A) = 0.5<span>&#215;</span>d<sub>1</sub
-                ><span>&#215;</span>d<sub>2</sub>
-              </p>
-              <p>d<sub>1</sub> = 16cm, d<sub>2</sub> = 8cm</p>
+              <h2 id="rectangle-text" class="card-title">Rectangle</h2>
+              <p>Area (A) = W<span>&#215;</span>I</p>
+              <div>
+                <input
+                  id="rectangle-w"
+                  type="text"
+                  class="input input-bordered input-sm w-4/12 max-w-xs text-black"
+                  placeholder="W"
+                />
+                <span>cm</span>
+                <input
+                  id="rectangle-l"
+                  type="text"
+                  placeholder="I"
+                  class="input input-bordered input-sm w-4/12 max-w-xs"
+                />
+                <span>cm</span>
+              </div>
               <div class="card-actions mt-4 mb-4">
-                <button class="btn btn-primary px-14">Calculator</button>
+                <button id="rectangle-btn" class="btn btn-primary px-14">
+                  Calculator
+                </button>
               </div>
             </div>
           </div>
@@ -103,14 +117,18 @@
               />
             </figure>
             <div class="card-body items-center text-center">
-              <h2 class="card-title">Parallelogram</h2>
+              <h2 id="Parallelogram-text" class="card-title">Parallelogram</h2>
+              <p>Area (A) =b<span>&#215;</span>h</p>
               <p>
-                Area (A) = 0.5<span>&#215;</span>d<sub>1</sub
-                ><span>&#215;</span>d<sub>2</sub>
+                b = <span id="Parallelogram-b">10</span>cm, h =<span
+                  id="Parallelogram-h"
+                  >12</span
+                >cm
               </p>
-              <p>d<sub>1</sub> = 16cm, d<sub>2</sub> = 8cm</p>
               <div class="card-actions mt-4 mb-4">
-                <button class="btn btn-primary px-14">Calculator</button>
+                <button id="Parallelogram-btn" class="btn btn-primary px-14">
+                  Calculator
+                </button>
               </div>
             </div>
           </div>
@@ -200,6 +218,7 @@
       </section>
     </main>
     <!-- js link -->
+    <script src="js/utility.js"></script>
     <script src="js/geometri.js"></script>
   </body>
 </html>
