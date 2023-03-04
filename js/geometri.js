@@ -101,3 +101,28 @@ document.getElementById("rhombos").addEventListener("click", function () {
 
   displayData(RhombosText, RhombusArea);
 });
+
+// 5 measurement manupulate pentagon
+document.getElementById("pentagon-btn").addEventListener("click", function () {
+  serial = serial + 1;
+  // step 1
+  const pentagonText = document.getElementById("pentagon-text").innerText;
+  // step 2
+  const pentagonNumberString =
+    document.getElementById("pentagon-number").innerText;
+  const pentagonNumber = parseFloat(pentagonNumberString);
+  // step 3
+  const pentagonNumberPString = document.getElementById("pentagon-p").innerText;
+  const pentagonNumberP = parseFloat(pentagonNumberPString);
+  pentagonNumberPString.innerText = "";
+  // step 4
+  const pentagonNumberBString = document.getElementById("pentagon-b").innerText;
+  const pentagonNumberB = parseFloat(pentagonNumberBString);
+  pentagonNumberBString.innerText = "";
+  // step 5
+  const pentagonAreaMultiple =
+    pentagonNumberP * pentagonNumberB * pentagonNumber;
+  const pentagonArea = pentagonAreaMultiple.toFixed(2) + "cm";
+
+  displayData(pentagonText, pentagonArea);
+});
