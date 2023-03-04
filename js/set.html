@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>click hit</title>
+  </head>
+  <body>
+    <button id="hit-btn">hit</button>
+    <div>
+      <p id="p-1">Bangladesh</p>
+      <p id="p-2">Bangladesh</p>
+      <p id="p-3">Bangladesh</p>
+      <p id="p-4">Bangladesh</p>
+    </div>
+    <script>
+      document.getElementById("hit-btn").addEventListener("click", function () {
+        setText("p-1", "Bangladesh");
+        setText("p-2", "Pakistan");
+        setText("p-3", "China");
+        setText("p-4", "Canada");
+      });
+      function setText(id, countryName) {
+        document.getElementById(id).innerText = countryName;
+      }
+    </script>
+  </body>
+</html>
