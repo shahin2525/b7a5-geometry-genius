@@ -25,14 +25,9 @@ document.getElementById("triangle").addEventListener("click", function () {
     triangleInputBase * triangleInputHight * triangleNumber;
   const triangleArea = triangleAreaMultiple.toFixed(2) + "cm";
 
-  // console.log(
-  //   triangleText,
-  //   triangleNumber,
-  //   triangleInputBase,
-  //   triangleInputHight
-  // );
   displayData(triangleText, triangleArea);
 });
+
 // function 1
 function displayData(triangleText, triangleArea) {
   const container = document.getElementById("table-container");
@@ -59,15 +54,6 @@ document.getElementById("rectangle-btn").addEventListener("click", function () {
   const rectangleAreaMultiple = rectangleInputWidth * rectangleInputLength;
   const rectangleArea = rectangleAreaMultiple.toFixed(2) + " cm";
   displayData(rectangleText, rectangleArea);
-  // console.log(rectangleText, rectangleInputWidth, rectangleInputLength);
-
-  //   const container = document.getElementById("table-container");
-  //   const tr = document.createElement("tr");
-  //   tr.innerHTML = `
-  // <td>${2}</td>
-  //  <td>${rectangleText}</td>
-  //  <td>${rectangleArea}</td>`;
-  //   container.appendChild(tr);
 });
 
 // 3 measurement manupulate Parallelogram
@@ -90,11 +76,28 @@ document
     const parallelogramAreaMultiple = parallelogramBase * parallelogramHight;
     const parallelogramArea = parallelogramAreaMultiple.toFixed(2) + "cm";
     displayData(parallelogramText, parallelogramArea);
-    // const container = document.getElementById("table-container");
-    // const tr = document.createElement("tr");
-    // tr.innerHTML = `
-    // <td>${3}</td>
-    // <td>${parallelogramText}</td>
-    // <td>${parallelogramArea}</td>`;
-    // container.appendChild(tr);
   });
+
+// 4 measurement manupulate Parallelogram
+document.getElementById("rhombos").addEventListener("click", function () {
+  serial = serial + 1;
+  // step 1
+  const RhombosText = document.getElementById("Rhombus-text").innerText;
+  // step 2
+  const RhombusNumberString =
+    document.getElementById("Rhombus-number").innerText;
+  const RhombusNumber = parseFloat(RhombusNumberString);
+  // step 3
+  const RhombusNumberD1String = document.getElementById("Rhombus-d1").innerText;
+  const RhombusNumberD1 = parseFloat(RhombusNumberD1String);
+  RhombusNumberD1String.innerText = "";
+  // step 4
+  const RhombusNumberD2String = document.getElementById("Rhombus-d2").innerText;
+  const RhombusNumberD2 = parseFloat(RhombusNumberD2String);
+  RhombusNumberD2String.innerText = "";
+  // step 5
+  const RhombusAreaMultiple = RhombusNumberD1 * RhombusNumberD2 * RhombusNumber;
+  const RhombusArea = RhombusAreaMultiple.toFixed(2) + "cm";
+
+  displayData(RhombosText, RhombusArea);
+});
