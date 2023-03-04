@@ -35,7 +35,9 @@
       </div>
     </header>
     <main>
-      <section class="flex flex-col md:flex-row lg:flex-row gap-7 w-full ml-10">
+      <section
+        class="flex flex-col md:flex-row lg:flex-row gap-7 w-full md:ml-10 lg:ml-10"
+      >
         <div class="maesures grid md:grid-cols-2 lg:grid-cols-3 gap-5 w-9/12">
           <!-- Triangle -->
           <div class="card w-full bg-base-100 border-2 m-2">
@@ -184,15 +186,20 @@
               <img src="images/ellipse.png" alt="rhombus" class="rounded-xl" />
             </figure>
             <div class="card-body items-center text-center">
-              <h2 class="card-title">Ellipse</h2>
+              <h2 id="ellipse-text" class="card-title">Ellipse</h2>
               <p>
                 Area (A) =
                 <span>&#8508;</span>ab
               </p>
-              <p>a = 10cm, b = 4cm</p>
+              <p>
+                a =<span id="ellipse-a">10</span>cm, b =
+                <span id="ellipse-b">4</span>cm
+              </p>
 
               <div class="card-actions mt-4 mb-4">
-                <button class="btn btn-primary px-14">Calculator</button>
+                <button id="ellipse-btn" class="btn btn-primary px-14">
+                  Calculator
+                </button>
               </div>
             </div>
           </div>
