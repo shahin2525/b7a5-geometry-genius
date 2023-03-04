@@ -6,23 +6,35 @@ let serial = 0;
 // 1 measurement manupulate triangle
 document.getElementById("triangle").addEventListener("click", function () {
   serial = serial + 1;
-  // step 1
+
   const triangleText = document.getElementById("triangle-text").innerText;
-  // step 2
+
   const triangleNumberString =
     document.getElementById("triangle-number").innerText;
   const triangleNumber = parseFloat(triangleNumberString);
-  // step 3
+
   const triangleInputBaseString = document.getElementById("triangle-b").value;
   const triangleInputBase = parseFloat(triangleInputBaseString);
+  // validation
+  if (isNaN(triangleInputBase) || triangleInputBase < 0) {
+    alert("please provide a number that will be posative");
+    return;
+  }
+  // input clear
   triangleInputBaseString.value = "";
-  // step 4
+
   const triangleInputHightString = document.getElementById("triangle-h").value;
   const triangleInputHight = parseFloat(triangleInputHightString);
+  // validation
+  if (isNaN(triangleInputHight) || triangleInputHight < 0) {
+    alert("please provide a number that will be posative");
+    return;
+  }
   triangleInputHightString.value = "";
-  // step 5
+
   const triangleAreaMultiple =
     triangleInputBase * triangleInputHight * triangleNumber;
+
   const triangleArea = triangleAreaMultiple.toFixed(2) + "cm";
 
   displayData(triangleText, triangleArea);
@@ -48,16 +60,26 @@ document.getElementById("rectangle-btn").addEventListener("click", function () {
   const rectangleInputWidthString =
     document.getElementById("rectangle-w").value;
   const rectangleInputWidth = parseFloat(rectangleInputWidthString);
+  // validation
+  if (isNaN(rectangleInputWidth) || rectangleInputWidth < 0) {
+    alert("please provide a number that will be posative");
+    return;
+  }
   // input clear
   rectangleInputWidthString.value = "";
 
   const rectangleInputLengthString =
     document.getElementById("rectangle-l").value;
   const rectangleInputLength = parseFloat(rectangleInputLengthString);
-  const rectangleAreaMultiple = rectangleInputWidth * rectangleInputLength;
+  // validation
+  if (isNaN(rectangleInputLength) || rectangleInputLength < 0) {
+    alert("please provide a number that will be posative");
+    return;
+  }
   // input clear
   rectangleInputLengthString.value = "";
 
+  const rectangleAreaMultiple = rectangleInputWidth * rectangleInputLength;
   const rectangleArea = rectangleAreaMultiple.toFixed(2) + " cm";
   displayData(rectangleText, rectangleArea);
 });
@@ -133,4 +155,9 @@ document.getElementById("ellipse-btn").addEventListener("click", function () {
   const ellipseArea = ellipseAreaMultiple.toFixed(2) + "cm";
 
   displayData(ellipseText, ellipseArea);
+  disabledButton("ellipse-btn");
 });
+
+function disabledButton(id) {
+  document.getElementById(id).setAttribute("disabled", true);
+}
