@@ -16,7 +16,7 @@ document.getElementById("triangle-btn").addEventListener("click", function () {
   const triangleInputBaseString = document.getElementById("triangle-b").value;
   const triangleInputBase = parseFloat(triangleInputBaseString);
   // validation
-  if (isNaN(triangleInputBase) || triangleInputBase < 0) {
+  if (isNaN(triangleInputBase) || triangleInputBase <= 0) {
     alert("please provide a number that will be posative");
     return;
   }
@@ -26,7 +26,7 @@ document.getElementById("triangle-btn").addEventListener("click", function () {
   const triangleInputHightString = document.getElementById("triangle-h").value;
   const triangleInputHight = parseFloat(triangleInputHightString);
   // validation
-  if (isNaN(triangleInputHight) || triangleInputHight < 0) {
+  if (isNaN(triangleInputHight) || triangleInputHight <= 0) {
     alert("please provide a number that will be posative");
     return;
   }
@@ -62,7 +62,7 @@ document.getElementById("rectangle-btn").addEventListener("click", function () {
     document.getElementById("rectangle-w").value;
   const rectangleInputWidth = parseFloat(rectangleInputWidthString);
   // validation
-  if (isNaN(rectangleInputWidth) || rectangleInputWidth < 0) {
+  if (isNaN(rectangleInputWidth) || rectangleInputWidth <= 0) {
     alert("please provide a number that will be posative");
     return;
   }
@@ -73,7 +73,7 @@ document.getElementById("rectangle-btn").addEventListener("click", function () {
     document.getElementById("rectangle-l").value;
   const rectangleInputLength = parseFloat(rectangleInputLengthString);
   // validation
-  if (isNaN(rectangleInputLength) || rectangleInputLength < 0) {
+  if (isNaN(rectangleInputLength) || rectangleInputLength <= 0) {
     alert("please provide a number that will be posative");
     return;
   }
