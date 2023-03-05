@@ -4,7 +4,7 @@ document.getElementById("blog-button").addEventListener("click", function () {
 });
 let serial = 0;
 // 1 measurement manupulate triangle
-document.getElementById("triangle").addEventListener("click", function () {
+document.getElementById("triangle-btn").addEventListener("click", function () {
   serial = serial + 1;
 
   const triangleText = document.getElementById("triangle-text").innerText;
@@ -38,6 +38,7 @@ document.getElementById("triangle").addEventListener("click", function () {
   const triangleArea = triangleAreaMultiple.toFixed(2) + "cm";
 
   displayData(triangleText, triangleArea);
+  disabledButton("triangle-btn");
 });
 
 // function 1
@@ -82,6 +83,7 @@ document.getElementById("rectangle-btn").addEventListener("click", function () {
   const rectangleAreaMultiple = rectangleInputWidth * rectangleInputLength;
   const rectangleArea = rectangleAreaMultiple.toFixed(2) + " cm";
   displayData(rectangleText, rectangleArea);
+  disabledButton("rectangle-btn");
 });
 
 // 3 measurement manupulate Parallelogram
@@ -104,10 +106,11 @@ document
     const parallelogramAreaMultiple = parallelogramBase * parallelogramHight;
     const parallelogramArea = parallelogramAreaMultiple.toFixed(2) + "cm";
     displayData(parallelogramText, parallelogramArea);
+    disabledButton("Parallelogram-btn");
   });
 
-// 4 measurement manupulate Parallelogram
-document.getElementById("rhombos").addEventListener("click", function () {
+// 4 measurement manupulate Rhombus
+document.getElementById("rhombos-btn").addEventListener("click", function () {
   serial = serial + 1;
   const RhombosText = document.getElementById("Rhombus-text").innerText;
   const RhombusNumberString =
@@ -121,6 +124,7 @@ document.getElementById("rhombos").addEventListener("click", function () {
   const RhombusArea = RhombusAreaMultiple.toFixed(2) + "cm";
 
   displayData(RhombosText, RhombusArea);
+  disabledButton("rhombos-btn");
 });
 
 // 5 measurement manupulate pentagon
@@ -140,6 +144,7 @@ document.getElementById("pentagon-btn").addEventListener("click", function () {
   const pentagonArea = pentagonAreaMultiple.toFixed(2) + "cm";
 
   displayData(pentagonText, pentagonArea);
+  disabledButton("pentagon-btn");
 });
 
 // 5 measurement manupulate ellipse
